@@ -1,0 +1,5 @@
+# 1. build
+javac *.java
+
+# 2. start RMI server
+java -Djava.rmi.server.hostname=192.168.1.107 -Djava.rmi.server.useCodebaseOnly=false -Djava.security.policy=client.policy RemoteRMIServer
